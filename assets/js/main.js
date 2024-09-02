@@ -26,7 +26,7 @@ const addClassStickyHeaderHome = () => {
 addEventListener("DOMContentLoaded", () => {
   const $rrssMenu = document.querySelector("#menu-main .menu-rrss");
   const $listMenu = document.querySelector("#menu-menu-sorsa");
-  $listMenu.insertAdjacentHTML("afterend", $rrssMenu.innerHTML);
+  $listMenu?.insertAdjacentHTML("afterend", $rrssMenu.innerHTML);
 });
 window.addEventListener("DOMContentLoaded", addClassStickyHeaderHome);
 document.addEventListener("scroll", addClassStickyHeaderHome);

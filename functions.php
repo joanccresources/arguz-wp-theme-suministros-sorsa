@@ -10,3 +10,8 @@ function artech_child_theme_styles()
     wp_enqueue_style('artech-parent-style', get_template_directory_uri() . '/style.css', array('bootstrap'));
     wp_enqueue_style('artech-child-style', get_stylesheet_uri(), array('artech-parent-style'));
 }
+
+
+
+// Incluir los shortcodes
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-puntos-de-venta-sorsa.php';
