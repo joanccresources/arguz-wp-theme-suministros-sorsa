@@ -15,3 +15,5 @@ function artech_child_theme_styles()
 
 // Incluir los shortcodes
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-puntos-de-venta-sorsa.php';
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-nuestras-marcas.php';
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-nuestros-productos.php';
