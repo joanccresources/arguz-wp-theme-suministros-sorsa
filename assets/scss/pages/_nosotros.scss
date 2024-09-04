@@ -1,0 +1,64 @@
+#nosotros {
+  .cultura-corporativa {
+    .artech-button {
+      @media (max-width: 767px) {
+        padding-inline: 13px;
+      }
+    }
+  }
+
+  .artech-project-slider {
+    .nav {
+      &.nav-pills {
+        display: none !important;
+      }
+    }
+    .tag {
+      display: none !important;
+    }
+    .project-title {
+      margin-bottom: 0;
+    }
+    .title-section {
+      @media (max-width: 767px) {
+        padding-block: 15px;
+      }
+    }
+    .title {
+      min-height: 38px;
+      @media (min-width: 768px) {
+        min-height: 100px;
+      }
+    }
+    .img {
+      // Quitar el disco
+      &::after {
+        display: none !important;
+      }
+      @media (max-width: 767px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .nuestros-valores {
+    .capabilities-card {
+      border: 1px solid rgba(0, 0, 0, 0.0666666667);
+      img {
+        filter: invert(1) brightness(0);
+      }
+      .title {
+        color: #000000b5;
+      }
+    }
+  }
+
+  .sorsa-artech-capabilities-slider {
+    > .elementor-widget-container {
+      @media (max-width: 767px) {
+        padding-top: 30px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

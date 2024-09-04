@@ -5,9 +5,13 @@ function shortcode_tipo_productos_galeria($atts)
   ob_start();
 
   // Obtener los términos de la taxonomía "tipo_de_producto"
+  // Obtener los términos de la taxonomía "tipo_de_producto" ordenados por el campo "posicion"
   $terms = get_terms(array(
     'taxonomy' => 'tipo_de_producto',
     'hide_empty' => false,
+    'meta_key' => 'posicion',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
   ));
 
   if (is_wp_error($terms) || empty($terms)) {
