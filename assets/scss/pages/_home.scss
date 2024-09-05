@@ -35,7 +35,8 @@
   }
   .home-valores {
     img[src*="feat_shap.png"] {
-      @media (max-width: 767px) {
+      // @media (max-width: 767px) {
+      @media (max-width: 1199px) {
         display: none !important;
       }
     }
@@ -47,7 +48,8 @@
     // }
     .card-valores {
       &__content {
-        @media (max-width: 767px) {
+        // @media (max-width: 767px) {
+        @media (max-width: 1199px) {
           display: flex !important;
           position: relative;
           margin-bottom: 0;
@@ -86,5 +88,13 @@
       }
     }
   }
+
+  // .home-cta {
+  //   .circulo-whatsapp {
+  //     @media (max-width: 991px) {
+  //       height: 140px;
+  //     }
+  //   }
+  // }
 }
 // card-valores__content

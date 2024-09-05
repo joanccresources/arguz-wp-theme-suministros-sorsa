@@ -39,7 +39,8 @@ function shortcode_tipo_productos_galeria($atts)
     $col_class = ($count < 2) ? 'col-lg-6' : 'col-lg-4';
 
     echo '<div class="' . esc_attr($col_class) . '">';
-    echo '<a href="' . esc_url(get_term_link($term)) . '" class="project-card grid shadow-style drop-shadow-card">';
+    // echo '<a href="' . esc_url(get_term_link($term)) . '" class="project-card grid shadow-style drop-shadow-card">'; // quitar
+    echo '<a href="#0" class="project-card grid shadow-style drop-shadow-card">';
     echo '<div class="img">';
     echo '<img decoding="async" src="' . esc_url($imagen_url) . '" alt="' . esc_attr($term->name) . '" class="thumbnail-image" />';
     echo '</div>';

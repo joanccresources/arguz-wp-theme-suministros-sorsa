@@ -22,7 +22,8 @@ function shortcode_nuestras_marcas_cards($atts)
     $term_title = esc_html($term->name);
     $button_title = 'Ver catálogo de ' . explode(' ', $term_title)[0];
     // Obtener el enlace (slug) del término
-    $term_link = esc_url(get_term_link($term));
+    // $term_link = esc_url(get_term_link($term));
+    $term_link = "#0"; // quitar
 
     // Obtener el campo personalizado 'imagen_principal' usando ACF
     $imagen_principal = get_field('imagen_principal', 'marca_de_catalogo_' . $term->term_id);
@@ -71,6 +72,7 @@ function shortcode_nuestras_marcas_cards($atts)
               class="btn-sorsa elementor-element elementor-element-2b906e1 e-transform elementor-align-left elementor-widget elementor-widget-artech-button-animate text-center text-md-end mt-4 mt-md-0"
             >
               <div class="elementor-widget-container border-0">
+                <!-- <a href="' . $term_link . '" class="artech-button fade-border-effect  -->
                 <a href="' . $term_link . '" class="artech-button fade-border-effect text-decoration-none">
                   <span class="artech-button-content-wrapper">
                     <span class="artech-button-text text-center">' . $button_title . '</span>

@@ -11,7 +11,7 @@ const init = () => {
 };
 
 const initDOMReady = () => {
-  // simulateclickFirstOption();
+
 };
 
 init();

@@ -30,3 +30,15 @@ addEventListener("DOMContentLoaded", () => {
 });
 window.addEventListener("DOMContentLoaded", addClassStickyHeaderHome);
 document.addEventListener("scroll", addClassStickyHeaderHome);
+
+const desabilitarLinks = () => {
+  // Links desabilitados
+  Array.from(
+    document.querySelectorAll("#home .home-portafolio .col-lg-8 a")
+  ).forEach((a) => {
+    a.setAttribute("href", "#0");
+  });
+};
+addEventListener("DOMContentLoaded", () => {
+  desabilitarLinks();
+});

@@ -18,3 +18,17 @@
 .progress-wrap::after {
   color: $amarillo-sorsa !important;
 }
+
+// CTA
+.home-cta {
+  .circulo-whatsapp {
+    @media (max-width: 991px) {
+      height: 140px;
+    }
+  }
+}
+
+// Links desabilitados
+// #home .home-portafolio .col-lg-8 a {
+//   pointer-events: none !important;
+// }

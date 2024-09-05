@@ -12,6 +12,31 @@ header {
       color: #ff8851 !important;
     }
   }
+  #Header-jcc {
+    @media (min-width: 768px) and (max-width: 991px) {
+      padding-inline: 0;
+    }
+  }
+  #menu-main-menu {
+    .menu-item {
+      a {
+        @media (min-width: 768px) and (max-width: 991px) {
+          padding-inline: 7px;
+          font-size: 15px;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-inline: 0;
+      }
+    }
+  }
+  .elementor-hidden-mobile:has(
+      .elementor-widget-artech-text-editor .phone-header
+    ) {
+    @media (min-width: 768px) and (max-width: 1199px) {
+      display: flex !important;
+    }
+  }
 }
 
 body.home {
