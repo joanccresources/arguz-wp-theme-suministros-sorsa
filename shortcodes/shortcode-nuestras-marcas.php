@@ -68,12 +68,13 @@ function shortcode_nuestras_marcas_cards($atts)
           </div>
           <div class="col-lg-3 align-self-center">
             <div
-              class="elementor-element elementor-element-2b906e1 e-transform elementor-align-left elementor-widget elementor-widget-artech-button-animate text-center text-md-end mt-4 mt-md-0"
+              class="btn-sorsa elementor-element elementor-element-2b906e1 e-transform elementor-align-left elementor-widget elementor-widget-artech-button-animate text-center text-md-end mt-4 mt-md-0"
             >
               <div class="elementor-widget-container border-0">
                 <a href="' . $term_link . '" class="artech-button fade-border-effect text-decoration-none">
                   <span class="artech-button-content-wrapper">
                     <span class="artech-button-text text-center">' . $button_title . '</span>
+                    <img decoding="async" src="https://suministros.sorsa.pe/wp-content/uploads/2024/03/arrow_wh.svg" alt="Arrow" class="image" style="width: 25px;">
                   </span>
                 </a>
               </div>
