@@ -55,8 +55,9 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
                   </div>
                 </div>
 
-                <div class="col-lg-2 offset-lg-1">
-                  <a href="<?= esc_url($url_mapa); ?>" class="more-link" target="_blank">
+                <div class="col-lg-3">
+
+                  <a href="<?= esc_url($url_mapa); ?>" class="more-link d-none" target="_blank">
                     <span class="txt"> Ver en google maps</span>
                     <img
                       decoding="async"
@@ -64,6 +65,22 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
                       src="https://artech.themescamp.com/startup-agency/wp-content/uploads/sites/13/2024/03/arrow.svg"
                       alt="" />
                   </a>
+
+
+                  <div class="elementor-element elementor-element-6b0f5ba e-transform btn-sorsa elementor-align-left elementor-widget elementor-widget-artech-button-animate">
+                    <div class="elementor-widget-container">
+                      <a href="<?= esc_url($url_mapa); ?>" class="artech-button  fade-border-effect" target="_blank">
+                        <span class="artech-button-content-wrapper">
+                          <span class="artech-button-text">
+                            Ver en google maps </span>
+                          <img decoding="async" src="https://suministros.sorsa.pe/wp-content/uploads/2024/03/arrow_wh.svg" alt="" class="image">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+
+
                 </div>
               </div>
             </div>
