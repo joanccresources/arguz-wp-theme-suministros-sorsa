@@ -7,6 +7,9 @@ function shortcode_nuestras_marcas_cards($atts)
   $terms = get_terms(array(
     'taxonomy' => 'marca_de_catalogo',
     'hide_empty' => false,
+    'meta_key' => 'posicion',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
   ));
 
   if (empty($terms) || is_wp_error($terms)) {

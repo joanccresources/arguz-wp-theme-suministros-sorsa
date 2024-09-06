@@ -48,12 +48,23 @@
     // }
     .card-valores {
       &__content {
+        border: 1px solid #00000029;
+        border-radius: 12px;
         // @media (max-width: 767px) {
-        @media (max-width: 1199px) {
+        @media (max-width: 991px) {
+          // margin-bottom: 0;
+          // padding-bottom: 0px;
+        }
+        @media (max-width: 1024px) {
           display: flex !important;
-          position: relative;
-          margin-bottom: 0;
-          padding-bottom: 0px;
+          position: relative !important;
+        }
+      }
+      &:nth-last-of-type(1) {
+        .card-valores__content {
+          @media (min-width: 992px) {
+            margin-left: 15px;
+          }
         }
       }
     }
@@ -80,6 +91,12 @@
       width: auto;
       max-width: 100%;
     }
+    .btn-sorsa {
+      img[src*="arrow_wh"] {
+        width: 30px;
+        height: auto;
+      }
+    }
   }
   .home-portafolio {
     .sorsa-artech-portfolio-content {
@@ -98,3 +115,5 @@
   // }
 }
 // card-valores__content
+// border: 1px solid #00000029;
+// border-radius: 12px;
