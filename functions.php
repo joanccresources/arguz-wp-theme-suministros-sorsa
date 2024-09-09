@@ -10,6 +10,9 @@ function artech_child_theme_styles()
     if (is_page("home")) {
         wp_enqueue_script('home-script', get_stylesheet_directory_uri() . '/assets/js/home.js?v=' . time(), array(), null, true);
     }
+    if (is_page("nosotros")) {
+        wp_enqueue_script('nosotros-script', get_stylesheet_directory_uri() . '/assets/js/nosotros.js?v=' . time(), array(), null, true);
+    }
     wp_enqueue_style('artech-parent-style', get_template_directory_uri() . '/style.css', array('bootstrap'));
     wp_enqueue_style('artech-child-style', get_stylesheet_uri(), array('artech-parent-style'));
 }

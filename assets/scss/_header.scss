@@ -39,31 +39,31 @@ header {
   }
 }
 
-body.home {
-  header {
-    overflow-x: hidden;
-    background-color: transparent;
-    &.v-sticky {
-      .logo-pc {
-        .elementor-widget-container {
-          @media (min-width: 768px) {
-            display: flex;
-            align-items: center;
-          }
-        }
-        img {
-          @media (min-width: 768px) {
-            width: 186px;
-          }
-        }
-      }
-      @media (min-width: 768px) {
-        background-color: $azul-sorsa;
-      }
-    }
+// body.home {
+//   header {
+//     overflow-x: hidden;
+//     background-color: transparent;
+//     &.v-sticky {
+//       .logo-pc {
+//         .elementor-widget-container {
+//           @media (min-width: 768px) {
+//             display: flex;
+//             align-items: center;
+//           }
+//         }
+//         img {
+//           @media (min-width: 768px) {
+//             width: 186px;
+//           }
+//         }
+//       }
+//       @media (min-width: 768px) {
+//         background-color: $azul-sorsa;
+//       }
+//     }
 
-    @media (max-width: 767px) {
-      background-color: $azul-sorsa;
-    }
-  }
-}
+//     @media (max-width: 767px) {
+//       background-color: $azul-sorsa;
+//     }
+//   }
+// }
