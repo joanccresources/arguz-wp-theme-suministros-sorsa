@@ -2,11 +2,101 @@
   overflow-x: hidden !important;
 }
 
+// .btn-sorsa {
+//   a {
+//     &:hover {
+//       background-color: $amarillo-sorsa !important;
+//       border-color: $amarillo-sorsa !important;
+//     }
+//   }
+// }
+
 .btn-sorsa {
   a {
+    fill: #ffffff !important;
+    border-style: solid !important;
+    border-width: 2px 2px 2px 2px !important;
+    border-color: #000000 !important;
+    border-radius: 50rem 50rem 50rem 50rem !important;
+    padding: 10px 35px 10px 35px !important;
     &:hover {
       background-color: $amarillo-sorsa !important;
       border-color: $amarillo-sorsa !important;
+      color: white !important;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        #fff,
+        transparent
+      );
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        #fff,
+        transparent
+      );
+    }
+  }
+}
+
+.btn-sorsa-yellow {
+  a {
+    fill: #ffffff !important;
+    border-style: solid !important;
+    border-width: 2px 2px 2px 2px !important;
+    border-color: #f09b1a !important;
+    border-radius: 50rem 50rem 50rem 50rem !important;
+    padding: 10px 35px 10px 35px !important;
+    background-color: #f09b1a !important;
+    &:hover {
+      // background-color: $amarillo-sorsa !important;
+      border-color: $amarillo-sorsa !important;
+      color: white !important;
+      transform: none !important;      
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      top: -2px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        #fff,
+        transparent
+      );
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -2px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        #fff,
+        transparent
+      );
     }
   }
 }

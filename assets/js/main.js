@@ -40,5 +40,5 @@ const desabilitarLinks = () => {
   });
 };
 addEventListener("DOMContentLoaded", () => {
-  desabilitarLinks();
+  // desabilitarLinks();
 });
