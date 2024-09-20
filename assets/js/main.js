@@ -39,6 +39,36 @@ const desabilitarLinks = () => {
     a.setAttribute("href", "#0");
   });
 };
+
+const showMenuTablet = () => {
+  document.querySelector(".tablet-close")?.remove();
+  const btnBurger = document.querySelector("header .offcanvas-toggle");
+  btnBurger &&
+    btnBurger.addEventListener("click", () => {
+      document.querySelector("body > header").classList.add("active-mobile");
+      document
+        .querySelector(".fat-nav__wrapper")
+        .insertAdjacentHTML(
+          "afterbegin",
+          `<i class="fas fa-times tablet-close"></i>`
+        );
+      const btnClose = document.querySelector(".tablet-close");
+      btnClose &&
+        btnClose.addEventListener("click", () => {
+          document
+            .querySelector("body > header")
+            .classList.remove("active-mobile");
+          document.querySelector(".offcanvas-close").click();
+          btnClose.remove();
+        });
+    });
+};
+
+const initDomReady = () => {
+  showMenuTablet();
+};
+
 addEventListener("DOMContentLoaded", () => {
   // desabilitarLinks();
+  initDomReady();
 });
