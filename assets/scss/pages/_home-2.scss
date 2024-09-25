@@ -21,6 +21,10 @@
           object-position: bottom center;
         }
       }
+      &::after {
+        background-color: transparent;
+        opacity: 1;
+      }
     }
     .info {
       min-height: 266px;

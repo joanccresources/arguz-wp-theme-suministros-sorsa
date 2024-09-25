@@ -57,7 +57,8 @@ header {
   .top-logo {
     .logo1 {
       @media (min-width: 992px) and (max-width: 1199px) {
-        width: 175px;
+        // width: 175px;
+        width: 144px !important;
       }
     }
   }
@@ -75,6 +76,17 @@ header {
     }
   }
 
+  .btn-cta {
+    img {
+      @media (min-width: 992px) and (max-width: 1199px) {
+        width: 30px;
+      }
+    }
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 12px;
+    }
+  }
+
   #menu-main-menu {
     .menu-item {
       a {
@@ -84,7 +96,8 @@ header {
           font-size: 15px;
         }
         @media (min-width: 992px) and (max-width: 1199px) {
-          padding-inline: 12px;
+          // padding-inline: 12px;
+          padding-inline: 6px;
         }
         @media (min-width: 1200px) {
           padding-inline: 15px;
