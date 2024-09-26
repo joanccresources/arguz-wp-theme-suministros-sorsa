@@ -1,4 +1,55 @@
 #nuestros-productos {
+  .suministros-hero {
+    &__img {
+      img {
+        min-height: 452px;
+        @media (min-width: 768px) {
+          min-height: auto;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      margin-top: 78px;
+    }
+  }
+
+  .productos-galeria {
+    .project-card {
+      &__img {
+        width: 100%;
+      }
+      &__body {
+        background-color: #fff;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 45px 20px;
+        align-items: center;
+      }
+      &__title {
+        margin-bottom: 0;
+        color: #004e8f;
+        font-size: 18px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+        font-family: "MonaSans-SemiBold", sans-serif;
+      }
+      &__btn {
+        background-color: $amarillo-sorsa-02;
+        color: #fff;
+        // padding: 5px 25px;
+        border-radius: 15px;
+        transition: all 0.25s;
+        padding: 5px 20px;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+
   .content-galery {
     padding-inline: 12px;
   }

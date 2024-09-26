@@ -1,4 +1,84 @@
 #puntos-de-venta {
+  .suministros-hero {
+    &__img {
+      img {
+        min-height: 452px;
+        @media (min-width: 768px) {
+          min-height: auto;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      margin-top: 78px;
+    }
+  }
+  .tiendas {
+    .card-tienda {
+      background-color: #fff;
+      padding-block: 45px;
+      padding-inline: 30px;      
+      border-radius: 30px;
+      width: 992px;
+      max-width: 100%;
+      margin: auto;
+      &__title {
+        font-size: 32px;
+        font-family: "MonaSans-SemiBold", sans-serif;
+        font-weight: 600;
+        a {
+          color: $amarillo-sorsa;
+          .first {
+            color: $azul-sorsa;
+          }
+        }
+      }
+      &__btn {
+        background-color: $amarillo-sorsa-02;
+        color: #fff;
+        // padding: 5px 25px;
+        border-radius: 15px;
+        transition: all 0.25s;
+        padding: 8px 20px;
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+      // Lista
+      .list-puntos {
+        padding-left: 0;
+        li {
+          list-style: none;
+          display: flex;
+          font-size: 20px;
+          font-weight: 700;
+          color: #606060;
+        }
+      }
+      .address {
+        &::before {
+          content: "\f3c5";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin-right: 12px;
+          color: $azul-sorsa;
+        }
+      }
+      .phone {
+        &::before {
+          content: "\f095";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin-right: 12px;
+          transform: rotate(90deg);
+          color: $azul-sorsa;
+        }
+      }
+      @media (min-width: 768px) {
+        padding-inline: 50px;
+      }
+    }
+  }
+
   #artech-blog-card {
     .elementor-widget-container {
       padding-inline: 12px;

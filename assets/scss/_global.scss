@@ -149,6 +149,14 @@
       }
     }
   }
+  &__description {
+    h2 {
+      padding-inline: 10px;
+      @media (min-width: 768px) {
+        padding-inline: 0;
+      }
+    }
+  }
   &__img {
     img {
       height: 402px;

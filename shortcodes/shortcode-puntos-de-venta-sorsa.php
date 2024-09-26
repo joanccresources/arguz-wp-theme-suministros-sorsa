@@ -1,4 +1,5 @@
 <?php
+/*
 function shortcode_puntos_de_venta_sorsa_cards($atts)
 {
   // Inicia la salida del buffer
@@ -95,6 +96,82 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
   </div> <!-- .elementor-element -->
 <?php
   // Retorna la salida
+  return ob_get_clean();
+}
+add_shortcode("puntos_de_venta_sorsa_cards", "shortcode_puntos_de_venta_sorsa_cards");
+*/
+
+function shortcode_puntos_de_venta_sorsa_cards($atts)
+{
+  // Inicia la salida del buffer
+  ob_start();
+
+?>
+  <div>
+    <div class="artech-blog-card">
+      <?php
+      // Consulta personalizada para obtener los posts del custom post type "punto-de-venta"
+      $query = new WP_Query(array(
+        'post_type' => 'punto-de-venta',
+        'posts_per_page' => -1
+      ));
+
+      // Verifica si hay posts
+      if ($query->have_posts()):
+        while ($query->have_posts()):
+          $query->the_post();
+
+          // Obtiene los datos necesarios
+          $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); // Imagen destacada
+          $title = get_the_title(); // Título del post
+          $content = get_the_content(); // Contenido del post
+          $url_mapa = get_field('url_mapa'); // Campo personalizado "url_mapa"
+
+
+          $palabra = explode(' ', esc_html($title), 2); // Separa en 2 partes
+          $primeraPalabra = isset($palabra[0]) ? $palabra[0] : '';
+          $restoTexto = isset($palabra[1]) ? $palabra[1] : '';
+
+      ?>
+          <div class="card-tienda mt-4">
+            <div class="row justify-content-center gap-4 align-items-center">
+
+              <div class="col-lg-5">
+                <a
+                  target="_blank"
+                  href="<?= esc_url($url_mapa); ?>"
+                  class="card-tienda__figure">
+                  <img decoding="async" src="<?= esc_url($featured_img_url); ?>" alt="Imagen Mapa" class="card-tienda__img" />
+                </a>
+              </div>
+              <div class="col-lg-6">
+
+                <div class="card-tienda__body">
+                  <h6 class="card-tienda__title">
+                    <a href="<?= esc_url($url_mapa); ?>" target="_blank">
+                      <span class="first"><?= $primeraPalabra ?></span>
+                      <span class="rest"><?= $restoTexto ?></span>
+                    </a>
+                  </h6>
+                  <div class="card-tienda__description">
+                    <?= wp_kses_post($content); ?>
+                  </div>
+                  <div class="mt-4">
+                    <a href="<?= esc_url($url_mapa); ?>" class="card-tienda__btn" target="_blank">VER EN EL MAPA</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
+    </div>
+  </div>
+<?php
   return ob_get_clean();
 }
 add_shortcode("puntos_de_venta_sorsa_cards", "shortcode_puntos_de_venta_sorsa_cards");
