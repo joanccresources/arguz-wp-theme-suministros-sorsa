@@ -22,9 +22,63 @@
 
 #nuestras-marcas {
   .marcas-image {
-    
+    img {
+      height: 256px;
+      object-fit: cover;
+      @media (min-width: 768px) {
+        height: auto;
+      }
+    }
+    @media (min-width: 992px) {
+      margin-top: 80px;
+    }
   }
 
+  .marcas-logos {
+    .card-logo {
+      position: relative;
+      &__content {
+        position: absolute;
+        // bottom: 90px;
+        bottom: 6px;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        @media (min-width: 1400px) {
+          bottom: 12px;
+        }
+      }
+      &__btn {
+        color: black;
+        display: inline-block;
+        padding: 3px 24px;
+        border-radius: 18px;
+        border: 1px solid black;
+        font-size: 14px;
+      }
+    }
+    .row-logos {
+      .col-logos {
+        &:nth-of-type(even) {
+          .card-logo__btn {
+            color: #fff;
+            border: 1px solid #fff;
+          }
+        }
+        &:nth-child(-n + 3) {
+          .card-logo__content {
+            bottom: 80px;
+            @media (min-width: 1400px) {
+              bottom: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*--------------------------------------*/
   .artech-service-card {
     .title {
       text-align: center;

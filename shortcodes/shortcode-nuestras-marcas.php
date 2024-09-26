@@ -1,4 +1,5 @@
 <?php
+/*
 function shortcode_nuestras_marcas_cards($atts)
 {
   ob_start();
@@ -95,6 +96,50 @@ function shortcode_nuestras_marcas_cards($atts)
   echo '</div>';
 
   // Finalizar el buffer y retornar la salida
+  return ob_get_clean();
+}
+add_shortcode('nuestras_marcas_cards', 'shortcode_nuestras_marcas_cards');
+*/
+
+function shortcode_nuestras_marcas_cards($atts)
+{
+  ob_start();
+
+  $terms = get_terms(array(
+    'taxonomy' => 'marca_de_catalogo',
+    'hide_empty' => false,
+    'meta_key' => 'posicion',
+    'orderby' => 'meta_value_num',
+    'order' => 'ASC',
+  ));
+
+  if (empty($terms) || is_wp_error($terms)) {
+    echo '<p>No se encontraron marcas de catálogo.</p>';
+    return ob_get_clean();
+  }
+  echo '<div class="row row-logos">';
+  foreach ($terms as $term) {
+    $term_title = esc_html($term->name);
+    $term_link = "#0";
+    $imagen_principal = get_field('imagen_principal', 'marca_de_catalogo_' . $term->term_id);
+    $imagen_url = esc_url($imagen_principal['url']);
+
+    echo '
+    <div class="col-12 col-md-6 col-xl-4 px-0 col-logos">
+      <div class="card-logo">
+        <div class="card-logo__figure">          
+          <img
+            decoding="async"
+            src="' . $imagen_url . '"
+            alt="' . $term_title . '" />
+        </div>        
+        <div class="card-logo__content">
+          <a href="' . $term_link . '" class="card-logo__btn">VER CATÁLOGO</a>
+        </div>
+      </div>
+    </div>';
+  }
+  echo '</div>';
   return ob_get_clean();
 }
 

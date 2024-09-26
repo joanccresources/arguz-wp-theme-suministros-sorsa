@@ -68,7 +68,7 @@
       // background-color: $amarillo-sorsa !important;
       border-color: $amarillo-sorsa !important;
       color: white !important;
-      transform: none !important;      
+      transform: none !important;
     }
     &::before {
       position: absolute;
@@ -122,3 +122,42 @@
 // #home .home-portafolio .col-lg-8 a {
 //   pointer-events: none !important;
 // }
+
+.suministros-hero {
+  &__content {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    & > .e-con-inner {
+      justify-content: center !important;
+    }
+  }
+  &__title {
+    h2 {
+      display: inline-block;
+      max-width: 320px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        height: 4px;
+        width: 100px;
+        background-color: $amarillo-sorsa-02;
+      }
+    }
+  }
+  &__img {
+    img {
+      height: 402px;
+      object-fit: cover;
+      @media (min-width: 768px) {
+        height: auto;
+      }
+    }
+  }
+}
+// height: 402px;
+// object-fit: cover;
