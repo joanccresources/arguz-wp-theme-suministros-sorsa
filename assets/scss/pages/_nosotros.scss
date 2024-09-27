@@ -1,4 +1,130 @@
 #nosotros {
+  .suministros-hero {
+    &__img {
+      img {
+        min-height: 452px;
+        @media (min-width: 768px) {
+          min-height: auto;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      margin-top: 78px;
+    }
+  }
+  .nosotros-enfoque {
+    &__txt {
+      p {
+        @include m(768, 1199) {
+          font-size: 22px;
+          line-height: 1.75;
+        }
+      }
+    }
+  }
+  .nosotros-mision {
+    &__body {
+      height: auto;
+      @include m(768) {
+        height: 497px;
+      }
+      @include m(768, 1199) {
+        height: 397px;
+      }
+    }
+    &__figure {
+      width: 70%;
+      align-self: flex-end;
+      @include m(768) {
+        width: 50%;
+      }
+    }
+    .card-mision {
+      &__title {
+        h2 {
+          @include m(768, 1199) {
+            font-size: 28px;
+          }
+        }
+      }
+      &__txt {
+        p {
+          @include m(768, 1199) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      @include m(768, 1199) {
+        padding: 20px 15px;
+      }
+    }
+  }
+  .nosotros-valores {
+    &__list {
+      .e-con-inner {
+        gap: 15px;
+        align-items: stretch;
+        justify-content: center;
+        @include m(768, 1199) {
+          flex-wrap: wrap;          
+        }
+      }
+    }
+    .card-valor {
+      background-color: white;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 264px;
+      padding: 20px 20px;
+      padding-top: 30px;
+      &__body {
+        padding: 0;
+      }
+      &__figure {
+        padding: 0;
+      }
+      &__img {
+        img {
+          height: 104px;
+          width: auto;
+        }
+      }
+      &__title {
+        margin-top: 15px;
+        .elementor-widget-container {
+          height: 56px;
+          display: flex;
+          align-items: center;
+        }
+        h4 {
+          position: relative;
+          font-size: 24px;
+          font-weight: 700;
+          font-style: italic;
+          color: #004ea0;
+          letter-spacing: -0.5px;
+          text-transform: uppercase;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 75px;
+            height: 4px;
+            background-color: $amarillo-sorsa;
+          }
+        }
+      }
+      &__txt {
+        margin-top: 15px;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+  }
+
+  //
   .cultura-corporativa {
     .artech-button {
       @media (max-width: 767px) {
