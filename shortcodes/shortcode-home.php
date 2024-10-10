@@ -804,7 +804,7 @@ function shortcode_home_galeria($atts)
   // Script
   echo "
   <script>
-    (()=> {      
+    (()=> {
       document.addEventListener('DOMContentLoaded', () => {
         console.log('DOMContentLoaded');
         const swiper = new Swiper('.swiper-home', {

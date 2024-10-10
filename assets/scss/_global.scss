@@ -2,6 +2,12 @@
   overflow-x: hidden !important;
 }
 
+.no-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important; 
+} 
+
 // .btn-sorsa {
 //   a {
 //     &:hover {
