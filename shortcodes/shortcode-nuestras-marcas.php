@@ -120,9 +120,11 @@ function shortcode_nuestras_marcas_cards($atts)
   echo '<div class="row row-logos">';
   foreach ($terms as $term) {
     $term_title = esc_html($term->name);
-    $term_link = "#0";
+    // $term_link = "#0";
     $imagen_principal = get_field('imagen_principal', 'marca_de_catalogo_' . $term->term_id);
     $imagen_url = esc_url($imagen_principal['url']);
+    $enlace = get_field('enlace', 'term_' . $term->term_id);
+    $term_link = isset($enlace) ? $enlace : "#0";
 
     echo '
     <div class="col-12 col-md-6 col-xl-4 px-0 col-logos">
@@ -134,7 +136,7 @@ function shortcode_nuestras_marcas_cards($atts)
             alt="' . $term_title . '" />
         </div>        
         <div class="card-logo__content">
-          <a href="' . $term_link . '" class="card-logo__btn">VER CATÁLOGO</a>
+          <a href="' . $term_link . '" class="card-logo__btn" target="_blank">VER CATÁLOGO</a>
         </div>
       </div>
     </div>';

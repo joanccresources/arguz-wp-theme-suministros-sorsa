@@ -1,0 +1,31 @@
+.page-id-14133 {
+  header.site-header {
+    display: none;
+  }
+  #page-pasoil {
+    header.pasoil-header {
+      background-color: #141414;
+    }
+
+    .pasoil-lubricantes {
+      .card-lubricante {
+        &__figure {
+          height: 278px;
+          max-height: 100%;
+        }
+        &__img {
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        // &__btn {
+        //   a {
+        //     cursor: auto;
+        //   }
+        // }
+      }
+    }
+  }
+}

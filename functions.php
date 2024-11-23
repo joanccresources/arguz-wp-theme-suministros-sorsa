@@ -20,6 +20,9 @@ function artech_child_theme_styles()
     wp_enqueue_style('artech-child-style', get_stylesheet_uri(), array('artech-parent-style'));
 }
 
+// Comillas normales
+remove_filter('the_content', 'wptexturize');
+
 
 
 // Incluir los shortcodes

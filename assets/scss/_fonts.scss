@@ -5,8 +5,41 @@
   font-style: italic;
   font-display: swap;
 }
+// ACUMIN
+@font-face {
+  font-family: "Acumin-RPro";
+  src: url("fonts/Acumin-RPro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acumin-ItPro";
+  src: url("fonts/Acumin-ItPro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acumin-BdPro";
+  src: url("fonts/Acumin-BdPro.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Acumin-BdItPro";
+  src: url("fonts/Acumin-BdItPro.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
 .font-kenyan-coffee {
   font-family: "Kenyan Coffee Rg";
-  font-weight: bold; 
+  font-weight: bold;
+}
+.ff-acumin-regular {
+  font-family: "Acumin-RPro";
+  font-weight: 400;
 }
