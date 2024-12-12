@@ -666,13 +666,15 @@ function shortcode_home_galeria($atts)
     $imagen_principal = get_field('imagen_principal', $term);
     // Obtener la URL de la imagen si el campo tiene valor
     $imagen_url = isset($imagen_principal['url']) ? $imagen_principal['url'] : '';
-    
+
     $imagen_para_el_home = get_field('imagen_para_el_home', $term);
     $imagen_para_el_home_url = isset($imagen_para_el_home['url']) ? $imagen_para_el_home['url'] : '';
 
     $imagen_a_mostrar_url = !empty($imagen_para_el_home_url) ? $imagen_para_el_home_url : $imagen_url;
 
-
+    $enlace = get_field('enlace', $term);
+    $target = $enlace !== "#0" ? '_blank' : '_self';
+    
     // HTML
     // echo '<div class="">';
     // echo '<a href="#0" class="project-card grid shadow-style drop-shadow-card">';
@@ -691,7 +693,7 @@ function shortcode_home_galeria($atts)
     echo '          <img decoding="async" src="' . esc_url($imagen_a_mostrar_url) . '" alt="' . esc_attr($term->name) . '" class="card-productos__img"/>';
     echo '        </div>';
     echo '        <div class="card-productos__footer">';
-    echo '          <a href="#0" class="card-productos__btn">' . esc_html($term->name) . '</a>';
+    echo '          <a href="' . esc_url($enlace) . '" target="' . $target . '" class="card-productos__btn">' . esc_html($term->name) . '</a>';
     echo '        </div>';
     echo '      </div>';
     echo '    </div>';
