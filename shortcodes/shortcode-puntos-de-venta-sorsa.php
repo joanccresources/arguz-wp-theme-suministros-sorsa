@@ -106,7 +106,7 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
   // Inicia la salida del buffer
   ob_start();
 
-?>
+  ?>
   <div>
     <div class="artech-blog-card">
       <?php
@@ -126,21 +126,18 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
           $title = get_the_title(); // Título del post
           $content = get_the_content(); // Contenido del post
           $url_mapa = get_field('url_mapa'); // Campo personalizado "url_mapa"
-
+    
 
           $palabra = explode(' ', esc_html($title), 2); // Separa en 2 partes
           $primeraPalabra = isset($palabra[0]) ? $palabra[0] : '';
           $restoTexto = isset($palabra[1]) ? $palabra[1] : '';
 
-      ?>
-          <div class="card-tienda mt-4">
+          ?>
+          <div class="card-tienda mt-4" data-id="<?= get_the_ID() ?>">
             <div class="row justify-content-center gap-4 align-items-center">
 
               <div class="col-lg-5">
-                <a
-                  target="_blank"
-                  href="<?= esc_url($url_mapa); ?>"
-                  class="card-tienda__figure">
+                <a target="_blank" href="<?= esc_url($url_mapa); ?>" class="card-tienda__figure">
                   <img decoding="async" src="<?= esc_url($featured_img_url); ?>" alt="Imagen Mapa" class="card-tienda__img" />
                 </a>
               </div>
@@ -164,14 +161,14 @@ function shortcode_puntos_de_venta_sorsa_cards($atts)
 
             </div>
           </div>
-      <?php
+          <?php
         endwhile;
         wp_reset_postdata();
       endif;
       ?>
     </div>
   </div>
-<?php
+  <?php
   return ob_get_clean();
 }
 add_shortcode("puntos_de_venta_sorsa_cards", "shortcode_puntos_de_venta_sorsa_cards");

@@ -16,7 +16,7 @@
     .card-tienda {
       background-color: #fff;
       padding-block: 45px;
-      padding-inline: 30px;      
+      padding-inline: 30px;
       border-radius: 30px;
       width: 992px;
       max-width: 100%;
@@ -129,5 +129,11 @@
       }
     }
     //
+  }
+
+  .card-tienda {
+    &:not([data-id="12404"]) {
+      display: none;
+    }
   }
 }
