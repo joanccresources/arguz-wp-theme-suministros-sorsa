@@ -104,10 +104,28 @@
   }
   .home-marcas {
     img {
-      height: 50px;
+      // height: 50px;
+      height: 100%;
       width: auto;
       max-width: 100%;
+      // &[alt*="valvoline"] {
+      //   height: 40px;
+      // }
+      display: inline-block;
     }
+    .swiper-slide-inner {
+      height: 50px;
+      &:has(img[alt*="valvoline"]) {
+        padding-block: 10px;
+      }
+      &:has(img[alt*="pasoil"]) {
+        padding-block: 12px;
+      }
+      &:has(img[alt*="power-flow"]) {
+        padding-block: 6px;
+      }      
+    }
+
     .btn-sorsa {
       img[src*="arrow_wh"] {
         width: 30px;
