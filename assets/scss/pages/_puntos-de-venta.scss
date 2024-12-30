@@ -16,9 +16,9 @@
     .card-tienda {
       background-color: #fff;
       padding-block: 45px;
-      padding-inline: 30px;
+      // padding-inline: 30px;
       border-radius: 30px;
-      width: 992px;
+      // width: 992px;
       max-width: 100%;
       margin: auto;
       &__title {
@@ -74,7 +74,7 @@
         }
       }
       @media (min-width: 768px) {
-        padding-inline: 50px;
+        // padding-inline: 50px;
       }
     }
   }
@@ -130,10 +130,21 @@
     }
     //
   }
+  // .card-tienda {
+  //   &:not([data-id="12404"]) {
+  //     display: none;
+  //   }
+  // }
 
   .card-tienda {
-    &:not([data-id="12404"]) {
-      display: none;
+    width: 576px;
+    &__body {
+      @media (max-width: 767px) {
+        padding-left: 30px;
+      }
+    }
+    @media (max-width: 767px) {
+      padding-block: 30px;
     }
   }
 }
