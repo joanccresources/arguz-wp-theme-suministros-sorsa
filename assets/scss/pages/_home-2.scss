@@ -103,27 +103,42 @@
     }
   }
   .home-marcas {
-    img {
-      // height: 50px;
-      height: 100%;
-      width: auto;
-      max-width: 100%;
-      // &[alt*="valvoline"] {
-      //   height: 40px;
-      // }
-      display: inline-block;
+    .e-eicon-chevron-left,
+    .e-eicon-chevron-right {
+      fill: #00509e !important;
+    }
+    .swiper-slide {
+      height: 130px;
+      // width: 223px !important;
     }
     .swiper-slide-inner {
-      height: 50px;
-      &:has(img[alt*="valvoline"]) {
-        padding-block: 10px;
-      }
-      &:has(img[alt*="pasoil"]) {
-        padding-block: 12px;
-      }
-      &:has(img[alt*="power-flow"]) {
-        padding-block: 6px;
-      }      
+      // height: 50px;
+      // &:has(img[alt*="valvoline"]) {
+      //   padding-block: 10px;
+      // }
+      // &:has(img[alt*="pasoil"]) {
+      //   padding-block: 12px;
+      // }
+      // &:has(img[alt*="power-flow"]) {
+      //   padding-block: 6px;
+      // }
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      // height: 100%;
+      // width: auto;
+      // max-width: 100%;
+      display: inline-block;
+      object-fit: contain;
+      max-height: 130px;
+      height: auto;
+      max-width: 223px;
+      width: 100%;
+      padding: 30px 20px;
     }
 
     .btn-sorsa {

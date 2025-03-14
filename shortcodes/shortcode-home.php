@@ -650,6 +650,13 @@ function shortcode_home_galeria($atts)
     'meta_key' => 'posicion',
     'orderby' => 'meta_value_num',
     'order' => 'ASC',
+    'meta_query' => array(
+      array(
+        'key' => 'ocultar', // Campo personalizado "ocultar"
+        'compare' => '!=',  // Excluir términos donde "ocultar" sea verdadero
+        'value' => true,     // Valor "1" representa "Verdadero" en ACF
+      ),
+    ),
   ));
 
   if (is_wp_error($terms) || empty($terms)) {
@@ -674,7 +681,7 @@ function shortcode_home_galeria($atts)
 
     $enlace = get_field('enlace', $term);
     $target = $enlace !== "#0" ? '_blank' : '_self';
-    
+
     // HTML
     // echo '<div class="">';
     // echo '<a href="#0" class="project-card grid shadow-style drop-shadow-card">';

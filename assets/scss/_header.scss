@@ -102,6 +102,15 @@ header {
         @media (min-width: 1200px) {
           padding-inline: 15px;
         }
+        &:hover {
+          color: #ff8851;
+        }
+        &::after {
+          color: #fff;
+        }
+      }
+      .sub-menu {
+        background: #0d59a3;
       }
       @media (min-width: 768px) {
         margin-inline: 0;

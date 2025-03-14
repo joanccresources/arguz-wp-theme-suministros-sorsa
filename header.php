@@ -16,7 +16,7 @@
   if (class_exists('\ThemescampPlugin\ThemescampPlugin')) {
     do_action("themescamp_head_builder");
   } else {
-  ?>
+    ?>
     <!--Default header Fallback if no options install-->
     <div class="default-header clearfix tcg-theme">
       <nav class="header apply-header not-custom-menu clearfix white-header shadow-header .">
@@ -24,11 +24,12 @@
           <div class="stuck-nav">
             <div class="container-fluid">
               <div class="top-logo">
-                <p class="site-title"><a href='<?php echo esc_url(home_url('/')); ?>' rel="home"><?php bloginfo('name'); ?></a></p>
+                <p class="site-title"><a href='<?php echo esc_url(home_url('/')); ?>'
+                    rel="home"><?php bloginfo('name'); ?></a></p>
               </div>
               <div class="header-wrapper d-none d-md-block"> <!-- hidden-xs hidden-sm -->
                 <div class="main-menu menu-wrapper">
-                  <?php artech_custom_menu_page('tcg_header_menu');  ?>
+                  <?php artech_custom_menu_page('tcg_header_menu'); ?>
                 </div>
               </div><!-- header-wrapper -->
 
@@ -49,5 +50,5 @@
         </div><!-- nav-box -->
       </nav><!-- header -->
     </div>
-  <?php
+    <?php
   }
