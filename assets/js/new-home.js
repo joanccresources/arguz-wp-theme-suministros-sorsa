@@ -14,6 +14,24 @@
     container.insertAdjacentHTML("afterbegin", htmlButton);
   };
 
+  const addCTAWhatsapp = () => {
+    const container = document.querySelector("body");
+    // console.log({ container });
+    // if (!settingsTheme.whatsapp) return;
+    const html = `
+      <div class="whatsapp-container">
+        <a class="cta-wsp" href="https://api.whatsapp.com/send/?phone=51954691632&text&type=phone_number&app_absent=0" target="_blank">
+          <div class="cta-wsp__content shadow-lg">
+            <span class="cta-wsp__title">¿TIENES UNA DUDA?</span>
+            <span class="cta-wsp__txt">Escríbenos</span>
+          </div>
+          <img src="https://honda.sorsa.pe/wp-content/themes/eura-child-sorsa/assets/img/btn-wsp.png" alt="Boton Whatsapp" width="113" height="113" class="cta-wsp__img"/>
+        </a>
+      </div>
+    `;
+    container.insertAdjacentHTML("beforeend", html);
+  };
+
   // const showMenuTablet = () => {
   //   document.querySelector(".tablet-close")?.remove();
   //   const btnBurger = document.querySelector("header .offcanvas-toggle");
@@ -41,11 +59,12 @@
   const initDomReady = () => {
     // Add your code here
     console.log("New Home");
-    insertWhatsAppButton();
+    // insertWhatsAppButton();
     // showMenuTablet();
+    addCTAWhatsapp();
   };
 
-  addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     initDomReady();
   });
 })();

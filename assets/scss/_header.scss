@@ -67,6 +67,23 @@ header {
     @media (min-width: 768px) and (max-width: 991px) {
       padding-inline: 0;
     }
+
+    & > div:nth-of-type(1) {
+      @media (min-width: 992px) {
+        justify-content: flex-start;
+      }
+    }
+    .element-no-hidden {
+      @media (min-width: 992px) {
+        display: none !important;
+      }
+    }
+
+    .logo1 {
+      @media (min-width: 1200px) and (max-width: 1400px) {
+        max-width: 166px;
+      }
+    }
   }
 
   // en tableta ocultar
@@ -98,6 +115,8 @@ header {
         @media (min-width: 992px) and (max-width: 1199px) {
           // padding-inline: 12px;
           padding-inline: 6px;
+          font-size: 14px;
+          margin-right: 10px;
         }
         @media (min-width: 1200px) {
           padding-inline: 15px;
@@ -118,6 +137,15 @@ header {
       @media (min-width: 1400px) {
         margin-inline: 15px;
       }
+    }
+    & > .menu-item {
+      @media (min-width: 1200px) {
+        margin-right: 7.5px;
+      }
+    }
+    // max-width: 166px;
+    @media (min-width: 1558px) {
+      margin-left: 199px;
     }
   }
   .elementor-hidden-mobile:has(
