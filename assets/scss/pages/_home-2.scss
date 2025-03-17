@@ -13,6 +13,9 @@ $gris-sorsa-03: #606060;
     // }
     .header-card {
       padding-bottom: 125px;
+      @media (min-width: 992px) {
+        padding-bottom: 90px;
+      }
       @media (min-width: 1400px) {
         // padding-top: 125px;
         // padding-bottom: 175px;
@@ -227,5 +230,5 @@ $gris-sorsa-03: #606060;
     @media (max-width: 767px) {
       width: 73px;
     }
-  }  
+  }
 }
